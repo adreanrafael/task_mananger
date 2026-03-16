@@ -10,7 +10,4 @@ const pool = new Pool({
     port: parseInt(process.env.DB_PORT, 10),
 });
 
-module.exports = {
-    query: (text, params) => pool.query(text, params),
-    pool,
-};
+module.exports = pool;
